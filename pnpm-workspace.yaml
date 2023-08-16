@@ -1,0 +1,4 @@
+# pnpm-workspace.yaml contains all JavaScript packages
+# pnpm-lock.yaml, auto generated JavaScript dependencies.
+packages:
+  - "www"

@@ -1,0 +1,5 @@
+{
+  "python.analysis.extraPaths": [
+    "./bazel-liquid/external/python_deps_flask/site-packages"
+  ]
+}
