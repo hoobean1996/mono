@@ -1,5 +1,7 @@
-#include <iostream>
+#include <gflags/gflags.h>
+#include <glog/logging.h>
+
 int main(int argc, char **argv) {
-  std::cout << "hello world" << std::endl;
+  LOG(INFO) << "gqld";
   return 0;
 }

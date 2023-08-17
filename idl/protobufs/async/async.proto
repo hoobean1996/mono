@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package async;
+
+message AsyncRequest {
+  string name = 1;
+}
+
+message AsyncResponse {
+  string name = 1;
+}
+
+service AsyncD {
+  rpc Schedule(AsyncRequest) returns (AsyncResponse) {}
+}
