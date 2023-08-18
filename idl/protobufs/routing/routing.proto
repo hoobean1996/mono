@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package routing;
+
+message RegisterRequest {
+  string ip = 1;
+  int32 port = 2;
+  string service_name = 3;
+}
+
+message RegisterResponse {
+  int32 status_code = 1;
+}
+
+message DeregisterRequest {}
+
+message DeregisterResponse {}
+
+service RoutingD {
+  // Register a service instance to RoutingD
+  rpc Register(RegisterRequest) returns (RegisterResponse) {}
+
+  // Deregister a service instance from RoutingD
+  rpc Deregister(DeregisterRequest) returns (DeregisterResponse) {}
+}

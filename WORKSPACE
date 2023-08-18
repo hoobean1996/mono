@@ -123,6 +123,13 @@ go_rules_dependencies()
 
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
 
+# To generate repositories.bzl, run the following gazelle command.
+# bazel run //:gazelle -- update-repos -from_file=go.mod -to_macro=repositories.bzl%go_repositories
+load("//:repositories.bzl", "go_repositories")
+
+# gazelle:repository_macro repositories.bzl%go_repositories
+go_repositories()
+
 gazelle_dependencies()
 
 http_archive(
@@ -154,10 +161,3 @@ load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_
 rules_proto_dependencies()
 
 rules_proto_toolchains()
-
-# To generate repositories.bzl, run the following gazelle command.
-# bazel run //:gazelle -- update-repos -from_file=go.mod -to_macro=repositories.bzl%go_repositories
-load("//:repositories.bzl", "go_repositories")
-
-# gazelle:repository_macro repositories.bzl%go_repositories
-go_repositories()

@@ -86,3 +86,43 @@ def go_repositories():
         sum = "h1:5Beo0mZN8dRzgrMMkDp0jc8YXQKx9DiJ2k1dkvGsn5A=",
         version = "v0.0.0-20190524140312-2c0ae7006135",
     )
+    go_repository(
+        name = "com_github_prometheus_client_model",
+        sum = "h1:UBgGFHqYdG/TPFD1B1ogZywDqEkwp3fBMvqdiQ7Xew4=",
+        importpath = "github.com/prometheus/client_model",
+        version = "v0.3.0",
+    )
+    go_repository(
+        name = "com_github_prometheus_client_golang",
+        importpath = "github.com/prometheus/client_golang",
+        sum = "h1:yk/hx9hDbrGHovbci4BY+pRMfSuuat626eFsHb7tmT8=",
+        version = "v1.16.0",
+    )
+    go_repository(
+        name = "com_github_prometheus_common",
+        importpath = "github.com/prometheus/common",
+        version = "v0.42.0",
+        sum = "h1:EKsfXEYo4JpWMHH5cg+KOUWeuJSov1Id8zGR8eeI1YM=",
+    )
+    go_repository(
+        name = "com_github_beorn7_perks",
+        commit = "3a771d992973f24aa725d07868b467d1ddfceafb",
+        importpath = "github.com/beorn7/perks",
+    )
+    go_repository(
+        name = "com_github_prometheus_procfs",
+        sum = "h1:kYK1Va/YMlutzCGazswoHKo//tZVlFpKYh+PymziUAg=",
+        importpath = "github.com/prometheus/procfs",
+        version = "v0.10.1",
+    )
+    go_repository(
+        name = "com_github_cespare_xxhash_v2",
+        importpath = "github.com/cespare/xxhash/v2",
+        sum = "h1:DC2CZ1Ep5Y4k3ZQ899DldepgrayRUGE6BBZ/cd9Cj44=",
+        version = "v2.2.0",
+    )
+    go_repository(
+        name = "com_github_matttproud_golang_protobuf_extensions",
+        commit = "c12348ce28de40eed0136aa2b644d0ee0650e56c",
+        importpath = "github.com/matttproud/golang_protobuf_extensions",
+    )
