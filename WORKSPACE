@@ -161,3 +161,67 @@ load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_
 rules_proto_dependencies()
 
 rules_proto_toolchains()
+
+# libevent
+# Use rules_foreign_cc as fewer as possible.
+#
+# 1. Build very basic libraries without any further dependencies.
+# 2. Build too complex to bazelize library.
+http_archive(
+    name = "rules_foreign_cc",  # 2021-12-03T17:15:40Z
+    sha256 = "1df78c7d7eed2dc21b8b325a2853c31933a81e7b780f9a59a5d078be9008b13a",
+    strip_prefix = "rules_foreign_cc-0.7.0",
+    url = "https://github.com/bazelbuild/rules_foreign_cc/archive/0.7.0.tar.gz",
+)
+
+http_archive(
+    name = "rules_perl",  # 2021-09-23T03:21:58Z
+    sha256 = "55fbe071971772758ad669615fc9aac9b126db6ae45909f0f36de499f6201dd3",
+    strip_prefix = "rules_perl-2f4f36f454375e678e81e5ca465d4d497c5c02da",
+    urls = [
+        "https://github.com/bazelbuild/rules_perl/archive/2f4f36f454375e678e81e5ca465d4d497c5c02da.tar.gz",
+    ],
+)
+
+load("@rules_perl//perl:deps.bzl", "perl_register_toolchains")
+
+perl_register_toolchains()
+
+http_archive(
+    name = "com_github_madler_zlib",  # 2017-01-15T17:57:23Z
+    build_file = "//bazel/zlib:zlib.BUILD",
+    sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
+    strip_prefix = "zlib-1.2.11",
+    urls = [
+        "https://downloads.sourceforge.net/project/libpng/zlib/1.2.11/zlib-1.2.11.tar.gz",
+        "https://zlib.net/fossils/zlib-1.2.11.tar.gz",
+    ],
+)
+
+http_archive(
+    name = "openssl",  # 2021-12-14T15:45:01Z
+    build_file = "//bazel/openssl:openssl.BUILD",
+    sha256 = "f89199be8b23ca45fc7cb9f1d8d3ee67312318286ad030f5316aca6462db6c96",
+    strip_prefix = "openssl-1.1.1m",
+    urls = [
+        "https://www.openssl.org/source/openssl-1.1.1m.tar.gz",
+        "https://github.com/openssl/openssl/archive/OpenSSL_1_1_1m.tar.gz",
+    ],
+)
+
+#
+# Starlark rules
+#
+load("@rules_foreign_cc//foreign_cc:repositories.bzl", "rules_foreign_cc_dependencies")
+
+rules_foreign_cc_dependencies(register_preinstalled_tools = False)
+
+http_archive(
+    name = "com_github_libevent_libevent",  # 2020-07-05T13:33:03Z
+    build_file = "//bazel/libevent:libevent.BUILD",
+    sha256 = "92e6de1be9ec176428fd2367677e61ceffc2ee1cb119035037a27d346b0403bb",
+    strip_prefix = "libevent-2.1.12-stable",
+    urls = [
+        "https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz",
+    ],
+)

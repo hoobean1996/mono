@@ -4,6 +4,7 @@
 #include "cc/coro/io_context.h"
 namespace coro {
 class socket {
+public:
   explicit socket(io_context &io_content) noexcept;
   socket(io_context &io_context, const endpoint &endpoint);
   socket(io_context &io_context, int fs) noexcept;
@@ -25,4 +26,6 @@ private:
   void free() noexcept;
   int fd_{-1};
 };
+
+void listen(socket &socket, int backlog);
 } // namespace coro

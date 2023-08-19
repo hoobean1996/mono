@@ -98,6 +98,10 @@
     "random": "cpp",
     "algorithm": "cpp",
     "filesystem": "cpp",
-    "functional": "cpp"
+    "functional": "cpp",
+    "span": "cpp",
+    "event-config.h": "c",
+    "hash_map": "cpp",
+    "hash_set": "cpp"
   }
 }
