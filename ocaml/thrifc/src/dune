@@ -1,0 +1,11 @@
+; entire src folder into a library named Interp
+; the parser and lexer will be modules by
+; Interp.Parser and Interp.Lexer
+
+(library
+ (name interp))
+
+(menhir
+ (modules parser))
+
+(ocamllex lexer)
