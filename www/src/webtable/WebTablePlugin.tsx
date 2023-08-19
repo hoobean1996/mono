@@ -1,0 +1,1 @@
+export function WebTablePlugin<T>() {}
