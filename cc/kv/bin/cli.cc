@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
   google::InitGoogleLogging(argv[0]);
   FLAGS_logtostderr = true;
   LOG(INFO) << "hello world!";
-  sleek::oxygen::FileWriter fw("./demo.txt");
+  kv::FileWriter fw("./demo.txt");
   std::string m1 = "hello world";
   fw.append(m1.c_str(), m1.size());
   return 0;

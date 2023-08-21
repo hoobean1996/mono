@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-namespace sleek::oxygen {
+namespace kv {
 
 class Random {
 public:
@@ -50,4 +50,4 @@ private:
   uint32_t seed;
 };
 
-} // namespace sleek::oxygen
+} // namespace kv

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <cstdint>
-namespace sleek::oxygen {
+namespace kv {
 struct SSTConfig {
   SSTConfig() = delete;
   ~SSTConfig() = delete;
@@ -10,4 +10,4 @@ struct SSTConfig {
 
   static constexpr int32_t MAX_DATA_BLOCK_SIZE = 4096;
 };
-} // namespace sleek::oxygen
+} // namespace kv

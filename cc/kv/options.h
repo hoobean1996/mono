@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace sleek::oxygen {
+namespace kv {
 struct Options {
   static Options defaultValue() {
     Options defaultOpts;
@@ -22,4 +22,4 @@ struct Options {
 
 struct ReadOptions {};
 struct WriteOptions {};
-} // namespace sleek::oxygen
+} // namespace kv

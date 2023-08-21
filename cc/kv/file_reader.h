@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-namespace sleek::oxygen {
+namespace kv {
 class FileReader final {
 public:
   explicit FileReader(const std::string &path);
@@ -11,4 +11,4 @@ public:
 private:
   int fd_;
 };
-} // namespace sleek::oxygen
+} // namespace kv

@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <sys/_types/_size_t.h>
 
-namespace sleek::oxygen {
+namespace kv {
 
 inline uint32_t crc32c(uint32_t crc, const char *buf, size_t len) {
   static uint32_t table[256];
@@ -33,4 +33,4 @@ inline uint32_t crc32c(uint32_t crc, const char *buf, size_t len) {
   }
   return ~crc;
 }
-} // namespace sleek::oxygen
+} // namespace kv

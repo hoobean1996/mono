@@ -4,7 +4,7 @@
 
 #include "cc/kv/sst_config.h"
 
-namespace sleek::oxygen {
+namespace kv {
 int DataBlockBuilder::add(const std::string &key, const std::string &value) {
   if (key.empty()) {
     return 0;
@@ -20,4 +20,4 @@ int DataBlockBuilder::add(const std::string &key, const std::string &value) {
     // utils::PutFixed32(_data, static_cast<int32_t>(key.size()));
   }
 }
-} // namespace sleek::oxygen
+} // namespace kv

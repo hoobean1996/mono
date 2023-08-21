@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "cc/kv/offset_info.h"
-namespace sleek::oxygen {
+namespace kv {
 class DataBlockBuilder;
 class FilterBlockBuilder;
 class IndexBlockBuilder;
@@ -44,4 +44,4 @@ private:
   int32_t keysNum_ = 0;
   double falsePositive_ = 0;
 };
-} // namespace sleek::oxygen
+} // namespace kv

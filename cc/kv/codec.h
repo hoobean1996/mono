@@ -2,7 +2,7 @@
 
 #include <cstdint>
 #include <string>
-namespace sleek::oxygen {
+namespace kv {
 void encode_fixed8(char *buf, std::uint8_t val);
 void encode_fixed32(char *buf, std::uint32_t val);
 void encode_fixed64(char *buf, std::uint64_t val);
@@ -16,4 +16,4 @@ inline void put_fixed8(std::string &dst, uint8_t val) {
   encode_fixed8(buf, val);
   dst.append(buf, sizeof(val));
 }
-} // namespace sleek::oxygen
+} // namespace kv

@@ -1,7 +1,7 @@
 #include "cc/kv/wal_writer.h"
 #include "cc/kv/crc32.h"
 
-namespace sleek::oxygen {
+namespace kv {
 int WalWriter::Write(const std::string_view &log) {
   char header[headerSize_];
   /// +---------------+----------+
@@ -23,4 +23,4 @@ int WalWriter::Write(const std::string_view &log) {
   s = fw_->append(log.data(), static_cast<int32_t>(len), true);
   fw_->sync();
 }
-} // namespace sleek::oxygen
+} // namespace kv

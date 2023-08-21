@@ -4,7 +4,7 @@
 #include <string_view>
 
 #include "cc/kv/skiplist.h"
-namespace sleek::oxygen {
+namespace kv {
 template <typename Key, typename Value> class SkipList;
 
 class MemTableIterator;
@@ -62,4 +62,4 @@ private:
 private:
   std::shared_ptr<SkipList<std::string, std::string>> ordered_table_;
 };
-} // namespace sleek::oxygen
+} // namespace kv

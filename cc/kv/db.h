@@ -5,7 +5,7 @@
 #include "cc/kv/options.h"
 #include "cc/kv/status.h"
 
-namespace sleek::oxygen {
+namespace kv {
 class DB {
 public:
   explicit DB(const Options &options);
@@ -23,4 +23,4 @@ public:
 
   Status Close();
 };
-} // namespace sleek::oxygen
+} // namespace kv

@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-namespace sleek::oxygen {
+namespace kv {
 class FileWriter;
 
 /// DataBlock layout
@@ -24,22 +24,22 @@ class FileWriter;
 class DataBlockBuilder final {
   using size_type = std::string::size_type;
 
- public:
+public:
   DataBlockBuilder() = default;
   ~DataBlockBuilder() = default;
 
-  int add(const std::string& key, const std::string& value);
+  int add(const std::string &key, const std::string &value);
   int finish_data_block();
   std::string_view data() { return data_; }
   void clear();
 
- private:
+private:
   size_t get_reecords_size() const { return data_.size(); }
 
- private:
+private:
   std::vector<int32_t> recordGroupOffset_;
   std::string preKey_;
   std::string data_;
   int32_t recordNum_ = 0;
 };
-}  // namespace sleek::oxygen
+} // namespace kv

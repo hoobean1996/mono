@@ -5,7 +5,7 @@
 
 #include "cc/kv/item.h"
 
-namespace sleek::oxygen {
+namespace kv {
 
 template <typename K, typename V> class Cache {
 public:
@@ -21,4 +21,4 @@ public:
   void release(const K &key);
   void onEvicit(evicitFn fn);
 };
-} // namespace sleek::oxygen
+} // namespace kv

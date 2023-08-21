@@ -2,7 +2,7 @@
 
 #include "cc/kv/file_writer.h"
 #include <memory>
-namespace sleek::oxygen {
+namespace kv {
 class FileWriter;
 class WalWriter final {
 public:
@@ -14,4 +14,4 @@ private:
   static const int headerSize_ = 8;
   std::shared_ptr<FileWriter> fw_;
 };
-} // namespace sleek::oxygen
+} // namespace kv

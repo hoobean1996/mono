@@ -1,7 +1,7 @@
 #pragma once
 
 #include <cstdint>
-namespace sleek::oxygen {
+namespace kv {
 template <typename K, typename V> class Item {
 public:
   Item() = default;
@@ -14,4 +14,4 @@ private:
   bool inCache_ = false;
   uint64_t lastAccessTime_ = 0;
 };
-} // namespace sleek::oxygen
+} // namespace kv

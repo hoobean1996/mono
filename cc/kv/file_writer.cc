@@ -5,7 +5,7 @@
 #include <sys/fcntl.h>
 #include <unistd.h>
 
-namespace sleek::oxygen {
+namespace kv {
 FileWriter::FileWriter(const std::string &path, bool append) {
   int mode = O_CREAT | O_WRONLY;
   if (append) {
@@ -90,4 +90,4 @@ int FileWriter::persist(const char *data, int32_t len) {
 }
 
 bool FileWriter::isBufferFull() { return bufferOffset_ == bufferSize_; }
-} // namespace sleek::oxygen
+} // namespace kv

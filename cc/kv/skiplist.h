@@ -4,7 +4,7 @@
 #include <optional>
 #include <vector>
 
-namespace sleek::oxygen {
+namespace kv {
 template <typename Key, typename Value> class SkipList;
 
 template <typename Key, typename Value> class Node {
@@ -114,4 +114,4 @@ private:
   static const int MAX_LEVEL = 16;
 };
 
-} // namespace sleek::oxygen
+} // namespace kv

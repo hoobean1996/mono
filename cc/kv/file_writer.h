@@ -2,19 +2,19 @@
 
 #include <string>
 
-namespace sleek::oxygen {
+namespace kv {
 class FileWriter final {
- public:
-  FileWriter(const std::string& path, bool append = true);
+public:
+  FileWriter(const std::string &path, bool append = true);
   ~FileWriter();
 
-  int append(const char* data, int32_t len, bool flush = false);
+  int append(const char *data, int32_t len, bool flush = false);
   int flush();
   void sync();
   void close();
 
- private:
-  int persist(const char* data, int32_t len);
+private:
+  int persist(const char *data, int32_t len);
   bool isBufferFull();
 
   static constexpr int32_t bufferSize_ = 65536;
@@ -22,4 +22,4 @@ class FileWriter final {
   char buffer_[bufferSize_];
   int32_t fd_;
 };
-}  // namespace sleek::oxygen
+} // namespace kv

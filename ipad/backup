@@ -1,0 +1,88 @@
+//
+//  ContentView.swift
+//  Quorum
+//
+//  Created by BIN HE on 21/8/23.
+//
+
+import SwiftUI
+import QuorumContext
+
+struct Tree<Value: Hashable>: Hashable {
+    let value: Value
+    var children: [Tree]? = nil
+}
+
+let categories: [Tree<String>] = [
+    .init(
+        value: "src",
+        children: [
+            .init(value: "node.h"),
+            .init(value: "node.cc"),
+            .init(value: "tree.h"),
+            .init(value: "tree.cc"),
+            .init(
+                value: "memory",
+                children: [
+                    .init(value: "node.h"),
+                    .init(value: "node.cc")
+                ]
+            ),
+        ]
+    ),
+    .init(
+        value: "tests",
+        children: [
+            .init(value: "node_test.cc"),
+            .init(value: "tree_test.cc"),
+        ]
+    )
+]
+
+
+
+struct TextEditorView: View {
+    @Binding var selectedFile: String
+    
+    var body: some View {
+        TextEditor(text: $selectedFile)
+    }
+}
+
+struct FileManagerView: View {
+    @Binding var selectedFile: String
+    var body: some View {
+        List(categories, id: \.value, children: \.children) { tree in
+            Button(action: {
+                print("Clicked on: \(tree.value)")
+                selectedFile = tree.value
+            }) {
+                Text(tree.value).font(.subheadline)
+            }
+        }.listStyle(SidebarListStyle())
+    }
+}
+
+
+struct ContentView: View {
+    @EnvironmentObject var context: Context
+    @State private var selectedFile: String = ""
+    
+    var body: some View {
+        GeometryReader { geometry in
+            HStack {
+                FileManagerView(selectedFile: $selectedFile)
+                    .frame(width: geometry.size.width * 0.2)
+                TextEditorView(selectedFile: $selectedFile)
+                    .frame(width:  geometry.size.width * 0.7)
+            }
+            .padding()
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
