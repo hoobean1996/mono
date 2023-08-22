@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hebin/awake/pkg/xlang"
+	"liquid.io/dsl/awake/pkg/xlang"
 )
 
 func TestEvalIntegerExpression(t *testing.T) {

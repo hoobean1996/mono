@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/user"
 
-	"github.com/hebin/awake/pkg/xlangrepl"
+	"liquid.io/dsl/awake/pkg/xlangrepl"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 	"hash/fnv"
 	"strings"
 
-	"github.com/hebin/awake/pkg/xlang"
+	"liquid.io/dsl/awake/pkg/xlang"
 )
 
 type ObjectType string

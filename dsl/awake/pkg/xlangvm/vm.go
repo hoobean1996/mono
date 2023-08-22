@@ -3,7 +3,7 @@ package xlangvm
 import (
 	"fmt"
 
-	"github.com/hebin/awake/pkg/xlanginterpreter"
+	"liquid.io/dsl/awake/pkg/xlanginterpreter"
 )
 
 const StackSize = 2048

@@ -6,8 +6,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/hebin/awake/pkg/xlang"
-	"github.com/hebin/awake/pkg/xlanginterpreter"
+	"liquid.io/dsl/awake/pkg/xlang"
+	"liquid.io/dsl/awake/pkg/xlanginterpreter"
 )
 
 const PROMT = ">>"

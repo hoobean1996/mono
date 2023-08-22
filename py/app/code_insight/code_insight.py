@@ -1,0 +1,2 @@
+class CodeInsight(object):
+    pass

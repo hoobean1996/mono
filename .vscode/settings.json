@@ -105,5 +105,9 @@
     "hash_set": "cpp"
   },
   "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-  "lldb.launch.expressions": "native"
+  "lldb.launch.expressions": "native",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none"
 }

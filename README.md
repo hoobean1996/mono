@@ -23,6 +23,7 @@ all projects are working in progress.
   - graphd: a graphql server
 
 - go
+  $ gazelle update-repos -from_file=go.mod
 
   - asyncd: a asynchronous task queue service
   - configd: a config manager for microservice

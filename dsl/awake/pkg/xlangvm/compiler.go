@@ -3,8 +3,8 @@ package xlangvm
 import (
 	"fmt"
 
-	"github.com/hebin/awake/pkg/xlang"
-	"github.com/hebin/awake/pkg/xlanginterpreter"
+	"liquid.io/dsl/awake/pkg/xlang"
+	"liquid.io/dsl/awake/pkg/xlanginterpreter"
 )
 
 type EmittedInstruction struct {

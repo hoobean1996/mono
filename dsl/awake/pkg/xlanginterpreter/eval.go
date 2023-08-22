@@ -3,7 +3,7 @@ package xlanginterpreter
 import (
 	"fmt"
 
-	"github.com/hebin/awake/pkg/xlang"
+	"liquid.io/dsl/awake/pkg/xlang"
 )
 
 var (

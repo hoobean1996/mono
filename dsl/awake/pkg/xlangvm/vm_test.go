@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hebin/awake/pkg/xlanginterpreter"
+	"liquid.io/dsl/awake/pkg/xlanginterpreter"
 )
 
 type vmTestCase struct {
